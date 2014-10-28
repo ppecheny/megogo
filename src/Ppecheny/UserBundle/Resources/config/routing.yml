@@ -1,0 +1,3 @@
+ppecheny_user_register:
+    path:     /register
+    defaults: { _controller: PpechenyUserBundle:Registration:register }

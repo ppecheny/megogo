@@ -1,0 +1,20 @@
+Ppecheny\QuestionaryBundle\Entity\Question:
+    type: entity
+    table: question
+    repositoryClass: Ppecheny\QuestionaryBundle\Entity\QuestionRepository
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        title:
+            type: string
+            length: 100
+            nullable: false
+        sortorder:
+            type: smallint
+            nullable: false
+        dataType:
+            type: string
+            length: 10
+            nullable: false

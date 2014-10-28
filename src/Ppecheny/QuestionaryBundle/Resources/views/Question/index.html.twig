@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div id="questionary-countdown">
+        {{ render(controller('PpechenyQuestionaryBundle:Question:countdown')) }}
+    </div>
+
+    <div id="questionary-content">
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {% set action = 'PpechenyQuestionaryBundle:Question:current' %}
+        {% else %}
+            {% set action = 'PpechenyUserBundle:Registration:register' %}
+        {% endif %}
+
+        {{ render(controller(action)) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+Ppecheny\QuestionaryBundle\Entity\UserAnswer:
+    type: entity
+    table: user_answer
+    repositoryClass: Ppecheny\QuestionaryBundle\Entity\UserAnswerRepository
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            column: user_id
+        questionId:
+            type: integer
+            nullable: false
+            column: question_id
+        answer:
+            type: string
+            nullable: 100
+#    manyToOne:
+#        user:
+#            targetEntity: Ppecheny\UserBundle\Entity\User
+#            joinColumn:
+#                name: user_id
+#                referencedColumnName: id
+#                onDelete: CASCADE
+#        question:
+#            targetEntity: Question
+#            joinColumn:
+#                name: question_id
+#                referencedColumnName: id
+#                onDelete: CASCADE
+    uniqueConstraints:
+        answer_idx:
+          columns: [ user_id, question_id ]

@@ -1,0 +1,7 @@
+parameters:
+    ppecheny.question.service.class: Ppecheny\QuestionaryBundle\Services\QuestionService
+
+services:
+    ppecheny.question.service:
+        class: %ppecheny.question.service.class%
+        arguments: [@session, @doctrine.orm.entity_manager, @form.factory]

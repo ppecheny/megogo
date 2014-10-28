@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <script src="{{ asset('assets/js/jquery-1.11.0.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('assets/js/jquery.form.min.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('assets/js/questionary.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('assets/js/jquery.countdown.min.js') }}" type="text/javascript"></script>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    Questionary.init();
+                });
+            </script>
+        {% endblock %}
+    </body>
+</html>

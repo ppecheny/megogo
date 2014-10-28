@@ -1,0 +1,12 @@
+
+<div id="countdown-clock">
+    <p>
+        <span id="time-left-holder"></span>
+        Seconds
+    </p>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        Questionary.initCountdown('countdown-clock', {{ timeLeft }}, 'Time finished');
+    });
+</script>

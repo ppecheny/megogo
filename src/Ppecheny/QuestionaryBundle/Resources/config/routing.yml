@@ -1,0 +1,7 @@
+ppecheny_questionary_main:
+    path:     /main
+    defaults: { _controller: PpechenyQuestionaryBundle:Question:index }
+
+ppecheny_questionary_current:
+    path:     /current
+    defaults: { _controller: PpechenyQuestionaryBundle:Question:current }

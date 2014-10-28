@@ -1,0 +1,11 @@
+default_route:
+    pattern: /
+    defaults: { _controller: PpechenyQuestionaryBundle:Question:index }
+
+ppecheny_user:
+    resource: "@PpechenyUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ppecheny_questionary:
+    resource: "@PpechenyQuestionaryBundle/Resources/config/routing.yml"
+    prefix:   /

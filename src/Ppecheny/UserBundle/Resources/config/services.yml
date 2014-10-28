@@ -1,0 +1,14 @@
+parameters:
+    ppecheny.user.service.class: Ppecheny\UserBundle\Services\UserService
+    ppecheny.user.registration.type.class: Ppecheny\UserBundle\Form\Type\RegistrationType
+
+services:
+    ppecheny.user.service:
+        class: %ppecheny.user.service.class%
+        arguments: [@session, @doctrine.orm.entity_manager, %questionary.time.limit%]
+
+    ppecheny.form.registrationType:
+        class: %ppecheny.user.registration.type.class%
+        #arguments: [@service_container]
+        tags:
+            - { name: form.type, alias: registrationType }

@@ -1,0 +1,48 @@
+{{ form_start(form,
+    {
+        'action': path('ppecheny_user_register'),
+        'attr': {
+            'class': 'ajax-form',
+            'data-target': 'questionary-content'
+        }
+    })
+}}
+<div>
+    {{ form_errors(form) }}
+</div>
+<div>
+    {{ form_errors(form.firstName) }}
+    {{ form_label(form.firstName) }}
+    {{ form_widget(form.firstName) }}
+</div>
+
+<div>
+    {{ form_errors(form.lastName) }}
+    {{ form_label(form.lastName) }}
+    {{ form_widget(form.lastName) }}
+</div>
+
+<div>
+    {{ form_errors(form.email) }}
+    {{ form_label(form.email) }}
+    {{ form_widget(form.email) }}
+</div>
+
+<div>
+    {{ form_errors(form.birthday) }}
+    {{ form_label(form.birthday) }}
+    {{ form_widget(form.birthday) }}
+</div>
+
+<div>
+    {{ form_errors(form.shoeSize) }}
+    {{ form_label(form.shoeSize) }}
+    {{ form_widget(form.shoeSize) }}
+</div>
+
+<div>
+    {{ form_label(form.save) }}
+    {{ form_widget(form.save) }}
+</div>
+
+{{ form_end(form) }}

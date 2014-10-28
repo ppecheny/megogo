@@ -1,0 +1,37 @@
+Ppecheny\UserBundle\Entity\User:
+    type:  entity
+    table: user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 50
+            nullable: false
+            column: first_name
+        lastName:
+            type: string
+            length: 50
+            nullable: false
+            column: last_name
+        email:
+            type: string
+            length: 32
+            column: user_email
+            unique: true
+            options:
+                fixed: true
+        password:
+            type: string
+            length: 32
+            nullable: false
+        birthday:
+            type: date
+            nullable: true
+        shoeSize:
+            type: smallint
+            nullable: true
+            column: shoe_size
